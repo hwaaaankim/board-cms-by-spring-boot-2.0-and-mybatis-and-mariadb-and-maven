@@ -41,9 +41,6 @@
 		<hr>
 	</c:forEach>
 	
-	
-	
-	
 </body>
 </html>
 
