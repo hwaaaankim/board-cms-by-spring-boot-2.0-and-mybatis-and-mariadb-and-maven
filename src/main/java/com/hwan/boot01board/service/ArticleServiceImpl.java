@@ -1,6 +1,5 @@
 package com.hwan.boot01board.service;
 
-import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
@@ -50,6 +49,11 @@ public class ArticleServiceImpl implements ArticleService{
 //		long newId = bigIntId.longValue();
 		
 		return CUtil.getAsLong(param.get("id"));
+	}
+	
+	@Override
+	public int getTotalCount() {
+		return articleDao.getTotalCount();
 	}
 }
 

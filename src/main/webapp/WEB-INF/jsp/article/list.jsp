@@ -31,7 +31,9 @@
 		<%
 			}
 		%>	 --%>
-	<h1>게시물 리스트.v2</h1>
+	<h1>게시물 리스트</h1>
+	<h2>전체 게시물 개수 : ${totalCount}</h2>
+	
 	<!-- el의 장점은 request.getAttribute("article")할 필요가 없음 -->
 	<c:forEach items="${list}" var= "article">
 		<section>
