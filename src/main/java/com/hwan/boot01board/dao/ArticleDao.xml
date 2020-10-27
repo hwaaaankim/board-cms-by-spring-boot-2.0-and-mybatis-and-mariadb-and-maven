@@ -3,7 +3,7 @@
 
 <mapper namespace = "com.hwan.boot01board.dao.ArticleDao">
 	<select id="getList" parameterType = "map" resultType="Article">
-		SELECT * FROM article
+		SELECT * FROM article order by id desc
 	</select>
 	
 	<insert id="add" parameterType="map" useGeneratedKeys="true" keyProperty="id">
