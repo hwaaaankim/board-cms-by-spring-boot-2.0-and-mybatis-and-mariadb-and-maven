@@ -57,7 +57,20 @@ public class ArticleController {
 		
 		long newId = articleService.add(param);
 		
-		return newId + "번 게시물이 추가 되었습니다";
+		String msg = newId + "번 게시물이 추가 되었습니다";
+		
+		StringBuilder sb = new StringBuilder();
+//		sb.append("<script>");
+//		sb.append("alert('"+msg+"')");
+//		sb.append("</script>");
+		
+		sb.append("alert('"+msg+"')");
+		sb.append("location.replace('./detail?id="+newId+"');");
+		sb.insert(0, "<script>");
+		sb.append("</script>");
+		
+		return sb.toString();
+		
 	}
 }
 
