@@ -7,5 +7,4 @@ import com.hwan.boot01board.dto.Article;
 public interface ArticleService {
 	
 	public List<Article> getList();
-	
 }

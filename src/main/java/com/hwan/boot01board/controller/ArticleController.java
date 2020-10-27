@@ -29,4 +29,20 @@ public class ArticleController {
 		
 		return "article/list";
 	}
+	
+	@RequestMapping("/")
+	public String showMain(Model amodel) {
+		List<Article> list = articleService.getList();
+		
+		amodel.addAttribute("list", list);
+		Log.info("list : " + list);
+		
+		return "article/list";
+	}
+	
+	@RequestMapping("/article/add")
+	public String showAdd() {
+		
+		return "article/add";
+	}
 }
