@@ -52,8 +52,10 @@ public class ArticleController {
 	@RequestMapping("/article/doAdd")
 	@ResponseBody
 	public String doAdd(@RequestParam Map<String, Object> param) {
-		articleService.add(param);
-		return "게시물이 추가 되었습니다";
+		
+		long newId = articleService.add(param);
+		
+		return newId + "번 게시물이 추가 되었습니다";
 	}
 }
 
