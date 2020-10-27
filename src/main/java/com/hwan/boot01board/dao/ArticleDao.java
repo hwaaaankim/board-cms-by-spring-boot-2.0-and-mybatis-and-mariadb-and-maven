@@ -1,6 +1,7 @@
 package com.hwan.boot01board.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,4 +13,6 @@ import com.hwan.boot01board.dto.Article;
 public interface ArticleDao {
 
 	public List<Article> getList();
+
+	public void add(Map<String, Object> param);
 }
