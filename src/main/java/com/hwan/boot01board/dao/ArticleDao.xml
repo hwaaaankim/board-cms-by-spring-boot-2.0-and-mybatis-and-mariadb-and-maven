@@ -17,6 +17,11 @@
 		FROM article
 	</select>
 	
+	<delete id="delete" parameterType="long">
+		DELETE FROM article
+		where id = #{id}
+	</delete>
+	
 	<insert id="add" parameterType="map" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO article
 		SET regDate = NOW(),
