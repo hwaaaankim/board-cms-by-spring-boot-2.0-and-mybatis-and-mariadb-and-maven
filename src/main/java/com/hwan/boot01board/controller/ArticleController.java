@@ -23,28 +23,28 @@ public class ArticleController {
 	@Autowired
 	ArticleService articleService;
 	
+	@RequestMapping("/article/detail")
+	public String showDetail(Model model, long id) {
+		Article article = articleService.getOne(id);
+		
+		model.addAttribute("article", article);
+		
+		return "article/detail";
+	}
+	
 	@RequestMapping("/article/list")
-	public String showList(Model amodel) {
+	public String showList(Model model) {
 		List<Article> list = articleService.getList();
 		int totalCount = articleService.getTotalCount();
 		
-		amodel.addAttribute("list", list);
-		amodel.addAttribute("totalCount", totalCount);
+		model.addAttribute("list", list);
+		model.addAttribute("totalCount", totalCount);
 		Log.info("list : " + list);
 		
 		return "article/list";
 	}
 	
-	@RequestMapping("/")
-	public String showMain(Model amodel) {
-		List<Article> list = articleService.getList();
 		
-		amodel.addAttribute("list", list);
-		Log.info("list : " + list);
-		
-		return "article/list";
-	}
-	
 	@RequestMapping("/article/add")
 	public String showAdd() {
 		
@@ -64,7 +64,7 @@ public class ArticleController {
 //		sb.append("alert('"+msg+"')");
 //		sb.append("</script>");
 		
-		sb.append("alert('"+msg+"')");
+		sb.append("alert('"+msg+"');");
 		sb.append("location.replace('./detail?id="+newId+"');");
 		sb.insert(0, "<script>");
 		sb.append("</script>");

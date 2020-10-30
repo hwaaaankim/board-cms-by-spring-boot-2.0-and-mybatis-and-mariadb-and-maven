@@ -13,4 +13,10 @@ public class HomeController {
 		
 		return "메인화면 입니다";
 	}
+	
+	@RequestMapping("/")
+	public String Main() {
+		
+		return "home/main";
+	}
 }
