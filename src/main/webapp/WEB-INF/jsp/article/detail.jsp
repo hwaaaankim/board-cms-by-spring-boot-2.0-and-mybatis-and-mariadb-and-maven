@@ -7,12 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티 사이트 - 게시물 상세페이지</title>
-<style>
-	.con{
-		width:1000px;
-		margin:0 auto;
-	}
-</style>
+<link rel="stylesheet" href="/resources/common.css"/>
 
 </head>
 <body>
