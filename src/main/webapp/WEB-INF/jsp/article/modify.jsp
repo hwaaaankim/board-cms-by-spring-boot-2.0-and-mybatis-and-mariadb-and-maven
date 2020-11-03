@@ -1,17 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
-     
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>커뮤니티 사이트 - 게시물 수정</title>
-<link rel="stylesheet" href="/resources/common.css"/>
-
-</head>
-<body>
-	<h1>게시물 수정</h1>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+<c:set var="pageName" value="게시물 수정"/>   
+<%@include file="../part/head.jspf" %>
 	<script>
 		function submitModifyForm(form){
 			form.title.value=form.title.value.trim();
@@ -66,8 +57,7 @@
 		<a href="./add">게시물 추가 </a>
 		<a onclick="if (confirm('삭제하시겠습니까?') == false) return false;" href="./doDelete?id=${article.id}">게시물 삭제 </a>
 	</div>
-</body>
-</html>
+<%@include file="../part/foot.jspf" %>
 
 
 

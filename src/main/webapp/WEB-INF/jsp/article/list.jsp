@@ -7,15 +7,8 @@
 <% 
 	List<Article> list = (List<Article>)request.getAttribute("list"); 
 %> --%>
-     
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>커뮤니티 사이트 - 게시물 리스트</title>
-<link rel="stylesheet" href="/resources/common.css">
-</head>
-<body>
+<c:set var="pageName" value="게시물 리스트"/>
+<%@include file="../part/head.jspf" %>
 	<%-- <h1>게시물 리스트.v1</h1>
 	
 		<% 
@@ -32,7 +25,6 @@
 		<%
 			}
 		%>	 --%>
-	<h1 class="con">게시물 리스트</h1>
 	<h2 class="con">전체 게시물 개수 : ${totalCount}</h2>
 	
 	<!-- el의 장점은 request.getAttribute("article")할 필요가 없음 -->
@@ -48,9 +40,7 @@
 	<div class="btns con">
 		<a href="./add">게시물 추가 </a>
 	</div>
-</body>
-</html>
-
+<%@include file="../part/foot.jspf" %>
 
 
 
