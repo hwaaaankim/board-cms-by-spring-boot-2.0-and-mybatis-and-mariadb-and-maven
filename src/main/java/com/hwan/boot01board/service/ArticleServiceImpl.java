@@ -66,6 +66,12 @@ public class ArticleServiceImpl implements ArticleService{
 	public void delete(long id) {
 		articleDao.delete(id);
 	}
+	
+	@Override
+	public void modify(Map<String, Object> param) {
+		articleDao.modify(param);
+	}
+	
 }
 
 
